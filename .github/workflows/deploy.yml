@@ -29,7 +29,7 @@ jobs:
           MESSAGE: ${{ secrets.MESSAGE }}
         run: |
           npm run build
-          $($MESSAGE)
+          $MESSAGE
 
       - name: Upload Build Artifact
         uses: actions/upload-pages-artifact@v3
