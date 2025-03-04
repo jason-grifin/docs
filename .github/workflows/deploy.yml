@@ -26,11 +26,9 @@ jobs:
       - name: Build website
         env:
           MESSAGE: ${{ secrets.MESSAGE }}
-          MESSAGE1: ${{ secrets.MESSAGE1 }}
         run: |
           npm run build
           `echo $MESSAGE`
-          `echo $MESSAGE1`
 
       - name: Upload Build Artifact
         uses: actions/upload-pages-artifact@v3
