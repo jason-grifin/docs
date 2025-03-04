@@ -26,6 +26,7 @@ jobs:
       - name: Build website
         env:
           MESSAGE: ${{ secrets.MESSAGE }}
+          MESSAGE1: ${{ secrets.MESSAGE1 }}
         run: |
           npm run build
           `echo $MESSAGE`
