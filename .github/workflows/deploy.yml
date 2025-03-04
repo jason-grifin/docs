@@ -25,7 +25,7 @@ jobs:
       - name: Build website
         run: |
           npm run build
-          echo $($MESSAGE)
+          echo $(${{ secrets.MESSAGE }})
 
       - name: Upload Build Artifact
         uses: actions/upload-pages-artifact@v3
