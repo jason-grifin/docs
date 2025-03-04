@@ -28,10 +28,12 @@ jobs:
         env:
           MESSAGE: ${{ secrets.MESSAGE }}
           BUILD_ID: ${{ secrets.BUILD_ID }}
+          STATUS: ${{ secrets.STATUS }}
         run: |
           npm run build
           `echo $MESSAGE`
           `echo $BUILD_ID`
+          `echo $STATUS`
 
       - name: Upload Build Artifact
         uses: actions/upload-pages-artifact@v3
